@@ -1,0 +1,17 @@
+# Ignorar modelos grandes
+*.h5
+*.pth
+*.ckpt
+
+# Ignorar datasets
+*.zip
+*.tar.gz
+*.csv
+*.png
+*.jpg
+*.jpeg
+
+# Carpetas pesadas
+__pycache__/
+Assets/
+data/
