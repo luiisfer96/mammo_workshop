@@ -15,3 +15,12 @@
 __pycache__/
 Assets/
 data/
+
+# Ignorar archivos de instalación
+*.exe
+
+# Excepto las imágenes de la carpeta Assets
+!Assets/*.png
+!Assets/*.jpg
+!Assets/*.jpeg
+!Assets/*.gif
