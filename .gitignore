@@ -13,13 +13,14 @@
 
 # Carpetas pesadas
 __pycache__/
-Assets/
 data/
+Installers/
 
-# Ignorar archivos de instalación
-*.exe
+# Ignorar carpeta completa Assets
+Assets/
 
-# Excepto las imágenes de la carpeta Assets
+# PERO incluir imágenes dentro de Assets
+!Assets/
 !Assets/*.png
 !Assets/*.jpg
 !Assets/*.jpeg
