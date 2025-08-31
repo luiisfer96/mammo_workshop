@@ -13,12 +13,12 @@ This repository contains the implementation, adaptation, and reproducibility of 
   Students at **Universidad Industrial de Santander (UIS)**  
 
 **Advisor:** Said Pertuz  
-**Research Group:** [Connectivity and Signal Processing Research Group (CPS)](https://www.uis.edu.co/)  
+**Research Group:** [Connectivity and Signal Processing Research Group (CPS)](https://uis.edu.co/ffm-gruinv-cps-en/)  
 
 ---
 
 ## 📂 Project Structure  
-
+```
 MAMMO_WORKSHOP/
 │
 ├── Articles/ # Reference articles in PDF
@@ -35,10 +35,42 @@ MAMMO_WORKSHOP/
 ├── nyu_controls.pkl # Control group annotations
 ├── nyu_gmic.pkl # Cases annotations
 ├── requirements.txt # List of dependencies
-
+```
 ⚠️ **Note:** The dataset is not included in the repository. It must be downloaded from the link provided in the notebooks and placed in the project root directory.  
 
 ---
+
+## ⚠️ Important Note on Datasets and Project Structure  
+
+This repository does **not** include the dataset.  
+Please download the `.pkl` files from the link provided in the notebooks and place them **directly in the root folder of the project (`MAMMO_WORKSHOP/`)**, at the same level as `preprocess.py` and the Jupyter notebooks.  
+
+The folder structure shown above must be respected, even if some directories are initially empty.  
+
+✅ To ensure everything is in place before running the notebooks, execute the following block in a Jupyter cell:
+
+```
+python
+import os
+
+required_files = ["nyu_controls.pkl", "nyu_gmic.pkl"]
+required_dirs = ["Articles", "Assets", "Installers", "Models", "RESULTS"]
+
+# Check files
+for f in required_files:
+    if not os.path.isfile(f):
+        print(f"❌ Missing file: {f}")
+    else:
+        print(f"✅ Found: {f}")
+
+# Check directories
+for d in required_dirs:
+    if not os.path.isdir(d):
+        print(f"❌ Missing directory: {d}")
+    else:
+        print(f"✅ Found directory: {d}")
+
+```        
 
 ## 🛠️ Technologies  
 - Python **3.7.0**  
